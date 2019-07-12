@@ -1,0 +1,35 @@
+<template>
+    <view class="relative w-full">
+        <div class="absolute bg-primary-500 w-full" style="height:300rpx"></div>
+        <div class="absolute w-full" style="top:150rpx">
+            <search-car class="flex w-full" bind:search="search"/>
+        </div>
+    </view>
+</template>
+
+<script>
+  import { createPage } from '@mpxjs/core'
+
+  createPage({
+    onLoad () {
+    },
+
+    search (data) {
+      wx.navigateTo({
+        url: 'result',
+        success: function (res) {
+          // 通过eventChannel向被打开页面传送数据
+          res.eventChannel.emit('acceptDataFromOpenerPage', data)
+        }
+      })
+    }
+  })
+</script>
+
+<script type="application/json">
+    {
+        "usingComponents": {
+            "search-car": "../components/search-car-card"
+        }
+    }
+</script>

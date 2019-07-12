@@ -1,0 +1,54 @@
+<template>
+    <view class="flex w-full flex-col justify-center">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">起点</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入qq" />
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">日期</view>
+            </view>
+            <view class="weui-cell__bd">
+                <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" tapChange="bindDateChange">
+                    <view class="weui-input">{{date || "请选择出发日期"}}</view>
+                </picker>
+            </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">手机号</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input class="weui-input" placeholder="请输入手机号" />
+            </view>
+
+        </view>
+
+
+    </view>
+</template>
+
+<script>
+  import { createPage } from '@mpxjs/core'
+
+  createPage({
+    onLoad () {
+    },
+
+  })
+</script>
+
+<script type="application/json">
+    {
+        "usingComponents": {
+        }
+    }
+</script>

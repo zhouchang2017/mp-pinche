@@ -1,0 +1,77 @@
+<template>
+    <view class="flex w-full flex-col justify-center">
+        <div class="bg-primary-500 min-w-full" style="height:300rpx">
+
+            <div class="card bg-transparent text-white flex-col">
+                <div class="w-full flex items-center">
+                    <div class="flex-1 text-center font-mono  text-xl">
+                        <div class="flex flex-col">
+                            <view>出发地区</view>
+                            <view class="text-xs">出发城市</view>
+                        </div>
+                    </div>
+                    <div class="flex-1 text-center ">
+                        <div class="flex flex-col">
+                            <div class="iconfont icon-chufadaodaxiao">
+                            </div>
+                            <div class="text-xs">出发时间</div>
+                        </div>
+                    </div>
+                    <div class="flex-1 text-center font-mono  text-xl">
+                        <div class="flex flex-col">
+                            <view>到达地区</view>
+                            <view class="text-xs">到达城市</view>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="flex justify-center -mt-8">
+            <div class="w-24 h-24 rounded-full border-solid border-white border-2 -mt-3 bg-primary-100"></div>
+        </div>
+        <div class="text-center px-3 pb-6 pt-2 flex flex-col">
+            <h3 class="text-black text-sm bold font-sans">老司机</h3>
+            <h3 class="text-gray-700 text-sm  font-sans">粤B**447</h3>
+            <p class="mt-2 font-sans font-light text-gray-500">Please don't smoke in the car. You can't put too much luggage in it!</p>
+        </div>
+        <div class="flex justify-center pb-3 text-gray-700">
+            <div class="text-center mr-3 border-solid border-r pr-3 flex flex-col border-gray-300 border-l-0 border-t-0 border-b-0">
+                <h2>2</h2>
+                <span>空座</span>
+            </div>
+            <div class="text-center flex flex-col">
+                <h2>5</h2>
+                <span>座位</span>
+            </div>
+        </div>
+
+        <div class="flex mt-20">
+            <button class="mx-5 w-full">Call</button>
+        </div>
+
+    </view>
+</template>
+
+<script>
+  import { createPage } from '@mpxjs/core'
+
+  createPage({
+    onLoad (option) {
+      console.log(option)
+    },
+
+    data: {
+      item: {}
+    }
+  })
+</script>
+
+<script type="application/json" lang="json">
+    {
+        "usingComponents": {
+        }
+    }
+</script>

@@ -1,0 +1,76 @@
+<template>
+    <form
+            bindsubmit="formSubmit"
+            class="card w-full"
+    >
+        <div class="w-full flex mb-10 items-center">
+            <div class="flex-1 text-center font-mono text-gray-600 text-2xl">
+                <picker name="from" mode="region" wx:model="{{from}}" wx:model-event="change">
+                    <div class="flex flex-col">
+                        <view>{{from[2] || '出发地区'}}</view>
+                        <view class="text-xs ">{{from[1] || '出发城市'}}</view>
+                    </div>
+                </picker>
+            </div>
+            <div class="flex-1 text-center text-gray-600 iconfont icon-chufadaodaxiao"></div>
+            <div class="flex-1 text-center font-mono text-gray-600 text-2xl">
+                <picker name="to" mode="region" wx:model="{{to}}" wx:model-event="change">
+                    <div class="flex flex-col">
+                        <view>{{to[2] || '到达地区'}}</view>
+                        <view class="text-xs ">{{to[1] || '到达城市'}}</view>
+                    </div>
+                </picker>
+            </div>
+        </div>
+        <div class="w-full flex justify-center items-center text-xl text-gray-500 mb-10">
+            <picker name="date" mode="date" wx:model="{{date}}" start="2015-09-01" wx:model-event="change">
+                <view>{{date === "" ? "出发时间" : date}}</view>
+            </picker>
+        </div>
+        <div>
+            <button type="primary" disabled="{{submitBtnDisabled}}" form-type="submit">查询</button>
+        </div>
+    </form>
+</template>
+
+<script>
+  import { createComponent } from '@mpxjs/core'
+
+  createComponent({
+    options: {
+      addGlobalClass: true
+      // styleIsolation:"apply-shared"
+    },
+    data: {
+      from: ['广东省', '深圳市', '宝安区'],
+      to: ['湖南省', '株洲市', '炎陵县'],
+      date: '2019-07-11',
+      start: '2015-09-01',
+      end: ''
+    },
+
+    methods: {
+
+      formSubmit: function (e) {
+        this.triggerEvent('search', e.detail.value)
+      }
+    },
+
+    computed: {
+      submitBtnDisabled () {
+        return !(
+          this.from.length >= 3 &&
+          this.to.length >= 3 &&
+          this.date !== ''
+        )
+      }
+    }
+  })
+</script>
+
+<script type="application/json" lang="json">
+    {
+        "component": true
+    }
+</script>
+
