@@ -1,8 +1,11 @@
 <script>
+  import mpx from '@mpxjs/core'
+  import mpxFetch from '@mpxjs/fetch'
+  mpx.use(mpxFetch)
   // app.js
   App({
-    onLaunch(){
-
+    onLaunch () {
+      console.log(process.env)
       // 登录
       wx.login({
         success: res => {
@@ -31,7 +34,6 @@
         }
       })
 
-
     }
   })
 </script>
@@ -42,27 +44,30 @@
 </style>
 
 
-
 <script type="application/json" lang='json'>
     {
         "pages": [
             "./pages/index",
-            "./pages/result",
-            "./pages/detail",
             "./pages/home",
+            "./pages/trip/index",
+            "./pages/trip/detail",
             "./pages/trip/create"
         ],
         "tabBar": {
             "selectedColor": "#667eea",
-            "list": [{
-                "pagePath": "pages/index",
-                "text": "首页"
-            }, {
-                "pagePath": "pages/home",
-                "text": "我的"
-            }]
+            "list": [
+                {
+                    "pagePath": "pages/index",
+                    "text": "首页"
+                },
+                {
+                    "pagePath": "pages/home",
+                    "text": "我的"
+                }
+            ]
         },
         "window": {
+            "backgroundColor": "#667eea",
             "backgroundTextStyle": "light",
             "navigationBarBackgroundColor": "#667eea",
             "navigationBarTitleText": "WeChat",

@@ -30,7 +30,7 @@
             <navigator wx:for="{{20}}" url="detail?id=1" class="mx-auto flex p-6 bg-white list-item">
                 <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary-100"></div>
                 <div class="ml-6 flex w-full flex-col h-full justify-between">
-                    <div class="text-base text-gray-600 leading-tight mb-1">Nickname</div>
+                    <div class="text-base  leading-tight mb-1">Nickname</div>
                     <div class="flex w-full justify-between">
                         <div class="text-xs text-gray-500 leading-normal">粤B**447</div>
                         <div class="text-xs text-gray-500 leading-normal">剩余座位:3</div>

@@ -98,6 +98,11 @@
     "@types/weixin-app" "^2.2.17"
     mobx "4.8.0"
 
+"@mpxjs/fetch@^2.0.12":
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/@mpxjs/fetch/-/fetch-2.0.12.tgz#2408ac08f92a8f470fad04620d4a4999b389e0ad"
+  integrity sha512-Wqyrssc6k+M6gmqxw9TkM3/YoEPt4JaIIxnmWHkGprtp4Uqv7Av3Orj94FTUNHFEdIpbHahKO5vGU2OCIVlyCQ==
+
 "@mpxjs/webpack-plugin@^2.0.0":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@mpxjs/webpack-plugin/-/webpack-plugin-2.1.5.tgz#61ddcb898507a98b605a1157df6d5d16974a8a4f"
@@ -2292,6 +2297,11 @@ domutils@^1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
+dotenv@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.0.0.tgz#ed310c165b4e8a97bb745b0a9d99c31bda566440"
+  integrity sha512-30xVGqjLjiUOArT4+M5q9sYdvuR4riM6yK9wMcas9Vbp6zZa+ocC9dp6QoftuhTPhFAiLK/0C5Ni2nou/Bk8lg==
+
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -4120,7 +4130,7 @@ math-expression-evaluator@^1.2.14:
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
   integrity sha1-3oGf282E3M2PrlnGrreWFbnSZqw=
 
-md5.js@^1.3.4:
+md5.js@^1.3.4, md5.js@^1.3.5:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
   integrity sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==
